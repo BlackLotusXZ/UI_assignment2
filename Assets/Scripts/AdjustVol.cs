@@ -17,7 +17,7 @@ public class AdjustVol : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        soundvalue = volumeSlider.value;
+        //soundvalue = volumeSlider.value;
     
 	}
 
@@ -25,8 +25,4 @@ public class AdjustVol : MonoBehaviour {
     {
         AudioListener.volume = volume;
     }
-    public void SetSFXVol(float volume)
-   {
-       AudioListener.volume = volume;
-   }
 }
