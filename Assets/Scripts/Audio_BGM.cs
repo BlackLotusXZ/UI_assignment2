@@ -8,8 +8,8 @@ public class Audio_BGM : MonoBehaviour {
     private static Audio_BGM instance;
 
     private AudioSource player;
-   //public AudioSource bgmMenu;
-    //public AudioSource bgmGameplay;
+    public AudioSource bgmMenu;
+    public AudioSource bgmGameplay;
 
     public Audio_BGM GetInstance()
     {
@@ -33,19 +33,20 @@ public class Audio_BGM : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    ////To be able to change between song files
-    //public void PlayTrack(int bgm)
-    //{
-    //    //if not playing main menu bgm, then swap
-    //    if(bgm == 0 && player != bgmMenu)
-    //    {
-    //        player = bgmMenu;
-    //        player.Play();
-    //    }
-    //    else if(bgm == 1 && player.clip != bgmGameplay.clip)
-    //    {
-    //        player.clip = bgmGameplay.clip;
-    //        player.Play();
-    //    }
-    //}
+    //To be able to change between song files
+    public void PlayTrack(int bgm_type)
+    {
+        //bgm type = 0 means it is menu
+        if (bgm_type == 0)
+        {
+            player = bgmMenu;
+            player.Play();
+        }
+        //bgm type = 1 means it is gameplay
+        else if (bgm_type == 1)
+        {
+            player.clip = bgmGameplay.clip;
+            player.Play();
+        }
+    }
 }
