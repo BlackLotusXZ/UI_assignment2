@@ -38,4 +38,11 @@ public class Transitions : MonoBehaviour {
         Debug.Log("Gameplay Level One Load");
         Application.LoadLevel("Gameplay");
     }
+
+    //trigger this when pause button is clicked on. Leads to gameplay pause screen
+    public void LoadPauseMenu()
+    {
+        Debug.Log("Pause Menu Load");
+        Application.LoadLevel("Pause_Menu");
+    }
 }

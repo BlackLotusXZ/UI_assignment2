@@ -1,3 +1,6 @@
 *.csproj
 *.sln
 *.suo
+*.meta
+*.info
+*.dll
